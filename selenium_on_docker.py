@@ -5,7 +5,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 
 TARGET_URL = "https://nakazt.github.io/actions_test/"
-EXPECTED_H1 = "GitHub Actions + Pages Sample"
+EXPECTED_H1 = "GitHub Actions + Pages Samples"
 
 def test_selenium(url, expected_h1):
     """run selenium"""
