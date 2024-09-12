@@ -8,7 +8,7 @@ TARGET_URL = "https://nakazt.github.io/actions_test/"
 EXPECTED_H1 = "GitHub Actions + Pages Sample"
 
 def test_selenium(url, expected_h1):
-    """run selenium"""
+    """exec selenium"""
 
     # set up
     chrome_options = Options()
@@ -21,12 +21,12 @@ def test_selenium(url, expected_h1):
 
     driver = webdriver.Chrome(options=chrome_options)
 
-    # exec selenium
+    # exec test
     driver.get(url)
     h1_text = driver.find_element(By.TAG_NAME, "h1").text
     assert (
         h1_text == expected_h1
-    ), f"h1 text does not match. Expected: {expected_h1}, Actual: {h1_text}"
+    ), f"H1 text does not match. Expected: {expected_h1}, Actual: {h1_text}"
     print(f"  title:   {driver.title}")
     print(f"  h1 text: {h1_text}")
 
